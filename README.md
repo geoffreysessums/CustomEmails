@@ -6,7 +6,7 @@ Written in Perl, CustomEmails produces output files suitable for sending persona
 * customer.txt
     * File containing sample input containing one customer per line
     * Each customer line contains:
-        * <email>,<full name>, <title>,<paid amount>,<owed amount>
+        * \<email\>,\<full name\>, \<title\>,\<paid amount\>,\<owed amount\>
         * For example: 
             * petem@xyz.net,Pete Moss,Mr.,10580.00,100
             * pcorn@abc.net,Pop Corn,Col.,50,200
