@@ -1,6 +1,6 @@
 # Project: CustomEmails
 ## Description: 
-Written in Perl, CustomEmails produces output files suitable for sending personalized emails to customers (i.e. one file for each customer meeting certain criteria)
+Written in Perl, CustomEmails produces email files suitable for sending personalized emails **only** to customers with an **owe amount** greater than **paid amount**. 
 
 ### Several files are included for testing:
 * customer.txt
@@ -11,7 +11,7 @@ Written in Perl, CustomEmails produces output files suitable for sending persona
             * petem@xyz.net,Pete Moss,Mr.,10580.00,100
             * pcorn@abc.net,Pop Corn,Col.,50,200
 * template.txt
-    * File containing references to variable (all caps) which should be substituted with values for each customer meeting the criteria.
+    * File containing references to variable (all caps) which should be substituted with values for each customer meeting the criteria mention above.
     * For Example:
         * EMAIL - customer email address (1st attribute)
         * TITLE - customer title (3rd attribute)
@@ -19,7 +19,25 @@ Written in Perl, CustomEmails produces output files suitable for sending persona
         * NAME - customer name 
         * AMOUNT - owe amount
         * DATE - date the payment must be received. (passed as a parameter to customEmails.pl)
+    * Sample:
+        MAIL FROM:<bill.king@croc.com>
+        RCPT TO:<EMAIL>
+        DATA
+        From: "Bill King" <bill.king@croc.com>
+        To: "FULLNAME" <EMAIL>
+        Subject: Payment is Due
 
+        Dear TITLE NAME,
+        We appreciate your business with Completely Reliable Outlet Corp.  You 
+        would be an even more valued customer if you will pay us $AMOUNT.  If 
+        you don't pay us by DATE, we will double the amount you owe us. 
+
+        If you have any questions regarding your account, please contact
+        me at 222-555-1234.
+
+        Bill King
+        Collections Manager
+        . 
 
 ## Installation
 Clone the repository wherever you like (e.g. `~/Projects/CustomEmails`):
@@ -30,15 +48,8 @@ git clone https://github.com/gsessums/CustomEmails.git
 ## Usage
 To execute enter the following command, then follow the on screen prompts.
 ```bash
-./processCustomerAccount.bash 
+./customEmails.pl mm/dd/yyyy 
 ```
-### Alternatively
-You may use the testInput.txt file that's included:
-```bash
-./processCustomerAccount.bash < testInput.txt 
-```
-
-## Output
 
 ## Credits
 Author: [Geoffrey Sessums](http://www.geoffreysessums.com)
