@@ -1,6 +1,6 @@
 # Project: CustomEmails
 ## Description: 
-Written in Perl, CustomEmails produces email files suitable for sending personalized emails **only** to customers with an **owe amount** greater than **paid amount**. 
+Written in Perl, CustomEmails produces email files suitable for sending personalized emails **only** to customers with an **owe amount** greater than **paid amount**. Generated emails are placed in a subordinate directory named "Emails". If that directory already exists, then all of its contents are removed; otherwise, the directory is created. 
 
 ### Several files are included for testing:
 * customer.txt
