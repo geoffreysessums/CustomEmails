@@ -1,8 +1,22 @@
-# Project: CustomEmails
-## Description: 
-Written in Perl, CustomEmails produces email files suitable for sending personalized emails **only** to customers with an **owe amount** greater than **paid amount**. Generated emails are placed in a subordinate directory named "Emails". If that directory already exists, then all of its contents are removed; otherwise, the directory is created. 
+# CustomEmails
 
-### Several files are included for testing:
+Geoffrey Sessums  
+CS 3424 Systems Programming - Fall 2017  
+Language(s): Perl 
+
+## Description
+
+CustomEmails produces output files in SMTP format suitable for sending personalized emails to customers with a balance on their accounts. Generated source files are prefixed with a "g". Also, generated emails are placed in a subordinate directory named "Emails". If that directory already exists, then all of its contents are removed; otherwise, the directory is created.
+
+## What I Learned
+
+* How to open, read, write, and process files with Perl
+* How to use regular expression for pattern matching
+
+## Testing
+
+Several files are included for testing:  
+
 * customer.txt
     * File containing sample input containing one customer per line
     * Each customer line contains:
@@ -41,21 +55,21 @@ Written in Perl, CustomEmails produces email files suitable for sending personal
           . 
 
 ## Installation
-Clone the repository wherever you like (e.g. `~/Projects/CustomEmails`):
-```bash
-git clone https://github.com/gsessums/CustomEmails.git
-```
+
+Clone the repository wherever you like (e.g. `~/Projects/CustomEmails`):  
+`git clone https://github.com/gsessums/CustomEmails.git`
 
 ## Usage
-To execute enter the following command, then follow the on screen prompts.
-```bash
-./customEmails.pl mm/dd/yyyy 
-```
+
+To execute enter the following command, then follow the on screen prompts.  
+`./customEmails.pl mm/dd/yyyy`
 
 ## Credits
-Author: [Geoffrey Sessums](http://www.geoffreysessums.com)
+
+Author: Geoffrey Sessums
 
 ## License
+
 MIT License
 
 Copyright (c) 2018 Geoffrey Sessums
